@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Azri | Portfolio</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1120;
+      color: #e5e7eb;
+      line-height: 1.7;
+    }
+    header {
+      padding: 70px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #172554, #312e81);
+    }
+    .profile {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+    }
+    h1 { font-size: 38px; margin-bottom: 5px; }
+    header p { color: #cbd5e1; }
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      margin: 8px;
+      border-radius: 8px;
+      background: #60a5fa;
+      color: #0b1120;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main { max-width: 950px; margin: auto; padding: 25px; }
+    section { margin: 35px 0; }
+    h2 { color: #93c5fd; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #172033;
+      padding: 20px;
+      border-radius: 14px;
+      border: 1px solid #293449;
+    }
+    .project-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 9px;
+      background: #273449;
+    }
+    footer { text-align: center; padding: 25px; color: #94a3b8; }
+  </style>
+</head>
+<body>
+
+<header>
+  <img class="profile" src="images/profile.jpg"
+       alt="Profile photo"
+       onerror="this.style.display='none'">
+  <h1>Muhammad Azri</h1>
+  <p>Computer Science Student | Technology | Data Analytics | STEM Innovation</p>
+  <a class="btn" href="https://www.linkedin.com/in/muhammad-azri-224b6241a/" target="_blank">LinkedIn</a>
+  <a class="btn" href="https://github.com/azridalimi" target="_blank">GitHub</a>
+</header>
+
+<main>
+  <section>
+    <h2>About Me</h2>
+    <div class="card">
+      I am interested in computer technology, data analytics,
+      software development and STEM innovation. This portfolio
+      showcases my projects, skills and achievements.
+    </div>
+  </section>
+
+  <section>
+    <h2>Featured Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <img class="project-img" src="images/smart-farming.jpg"
+             alt="Smart farming project"
+             onerror="this.style.display='none'">
+        <h3>AEROVISION SMART FARMING</h3>
+        <p>A smart agriculture innovation project. Add your project
+           photos and verified competition details here.</p>
+      </div>
+      <div class="card">
+        <img class="project-img" src="images/bridge.jpg"
+             alt="3D bridge design"
+             onerror="this.style.display='none'">
+        <h3>3D Bridge Design</h3>
+        <p>A bridge design and prototyping project involving 3D
+           modelling, engineering and automation.</p>
+      </div>
+      <div class="card">
+        <img class="project-img" src="images/dashboard.jpg"
+             alt="Data dashboard"
+             onerror="this.style.display='none'">
+        <h3>Data Dashboard</h3>
+        <p>A data visualization project. Add a screenshot of your
+           completed dashboard here.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="card">
+      GitHub · Microsoft Excel · Data Visualization · Dashboard Design
+      · 3D Modelling · Problem Solving
+    </div>
+  </section>
+
+  <section>
+    <h2>Certificates & Achievements</h2>
+    <div class="card">
+      Add your actual certificates, awards and competition
+      achievements here.
+      <p><a href="https://www.linkedin.com/in/muhammad-azri-224b6241a/"
+            target="_blank">View my LinkedIn profile</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Muhammad Azri · Personal Portfolio</footer>
+</body>
+</html>
