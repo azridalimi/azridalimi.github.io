@@ -9,427 +9,14 @@
 
   <title>Muhammad Azri | AI, Data & Technology Portfolio</title>
 
-  <style>
-    :root {
-      --bg: #0b1120;
-      --surface: #121c30;
-      --surface-light: #192640;
-      --blue: #75b7ff;
-      --white: #f1f5f9;
-      --muted: #a7b5ca;
-      --border: #293954;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
-    }
-
-    body {
-      font-family: Inter, "Segoe UI", Arial, sans-serif;
-      background: var(--bg);
-      color: var(--white);
-      line-height: 1.7;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1100px, 90%);
-      margin: auto;
-    }
-
-    /* NAVIGATION */
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(11, 17, 32, 0.95);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(12px);
-    }
-
-    .nav-inner {
-      min-height: 70px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .logo {
-      font-size: 21px;
-      font-weight: 800;
-      color: var(--blue);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      font-size: 14px;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover {
-      color: var(--blue);
-    }
-
-    /* HERO */
-
-    .hero {
-      padding: 90px 0;
-      background:
-        radial-gradient(ellipse at 75% 20%, #253a70 0%, transparent 48%),
-        linear-gradient(135deg, #101a30, #11182b);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .hero-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 55px;
-      max-width: 920px;
-      margin: auto;
-    }
-
-    .profile-wrap {
-      flex-shrink: 0;
-      padding: 7px;
-      border: 2px solid var(--blue);
-      border-radius: 50%;
-      box-shadow: 0 0 35px rgba(117, 183, 255, 0.15);
-    }
-
-    .profile {
-      display: block;
-      width: 205px;
-      height: 205px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center;
-      background: var(--surface-light);
-    }
-
-    .hero-text {
-      flex: 1;
-    }
-
-    .eyebrow {
-      color: var(--blue);
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 12px;
-      font-weight: 800;
-      margin-bottom: 12px;
-    }
-
-    h1 {
-      font-size: clamp(36px, 5vw, 54px);
-      line-height: 1.2;
-      letter-spacing: -1px;
-      margin-bottom: 18px;
-    }
-
-    .hero-text > p {
-      color: var(--muted);
-      font-size: 16px;
-      max-width: 550px;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 26px;
-    }
-
-    .btn {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      padding: 11px 18px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 700;
-      border: 1px solid var(--blue);
-      transition: 0.2s ease;
-    }
-
-    .btn-primary {
-      color: #08111f;
-      background: var(--blue);
-    }
-
-    .btn-secondary {
-      color: var(--white);
-      background: transparent;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      filter: brightness(1.1);
-    }
-
-    /* GENERAL SECTIONS */
-
-    section {
-      padding: 70px 0;
-    }
-
-    .section-heading {
-      margin-bottom: 26px;
-    }
-
-    .section-heading span {
-      color: var(--blue);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    h2 {
-      font-size: 30px;
-      margin-top: 5px;
-      line-height: 1.35;
-    }
-
-    .section-intro {
-      color: var(--muted);
-      max-width: 700px;
-      margin-top: 12px;
-    }
-
-    .card {
-      padding: 26px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-
-    .card:hover {
-      border-color: #5275a6;
-      transform: translateY(-3px);
-    }
-
-    .card h3 {
-      font-size: 19px;
-      margin-bottom: 9px;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .project-label {
-      display: inline-block;
-      color: var(--blue);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      margin-bottom: 10px;
-    }
-
-    /* SCHOLARSHIP */
-
-    .scholarship-card {
-      display: flex;
-      align-items: flex-start;
-      gap: 24px;
-      background: linear-gradient(135deg, #172641, #121c30);
-      border-color: #365783;
-    }
-
-    .scholarship-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      width: 120px;
-      height: 100px;
-      padding: 10px;
-      border-radius: 12px;
-      background: #ffffff;
-      border: 1px solid #dbe4ee;
-    }
-
-    .mnrb-logo {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    .status {
-      display: inline-block;
-      margin-top: 14px;
-      padding: 4px 10px;
-      border: 1px solid #315b4b;
-      border-radius: 20px;
-      color: #9ee6bd;
-      background: #153126;
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    /* SKILLS */
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .skill {
-      padding: 9px 14px;
-      background: var(--surface-light);
-      color: #dceaff;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 14px;
-    }
-
-    .text-link {
-      display: inline-block;
-      color: var(--blue);
-      font-size: 14px;
-      font-weight: 700;
-      margin-top: 12px;
-      margin-right: 12px;
-    }
-
-    .text-link:hover {
-      text-decoration: underline;
-    }
-
-    /* CONTACT */
-
-    .contact-card {
-      text-align: center;
-      padding: 40px 25px;
-      background: linear-gradient(135deg, #14223d, #17233b);
-    }
-
-    .contact-card p {
-      max-width: 580px;
-      margin: 12px auto 22px;
-    }
-
-    .contact-actions {
-      justify-content: center;
-    }
-
-    footer {
-      padding: 25px 0;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    /* MOBILE RESPONSIVE */
-
-    @media (max-width: 760px) {
-      .nav-inner {
-        padding: 14px 0;
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .nav-links {
-        gap: 10px 16px;
-      }
-
-      .hero {
-        padding: 60px 0;
-      }
-
-      .hero-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 28px;
-      }
-
-      .profile {
-        width: 170px;
-        height: 170px;
-      }
-
-      .hero-text > p {
-        margin: auto;
-      }
-
-      .hero-actions {
-        justify-content: center;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 52px 0;
-      }
-
-      h2 {
-        font-size: 26px;
-      }
-
-      .scholarship-card {
-        flex-direction: column;
-      }
-
-      .scholarship-icon {
-        width: 120px;
-        height: 90px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *, *::before, *::after {
-        transition: none !important;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
   <!-- NAVIGATION -->
-
   <nav>
     <div class="container nav-inner">
-      <a class="logo" href="#home">
-        AZRI<span style="color:white">.</span>
-      </a>
+      <a class="logo" href="#home">AZRI<span>.</span></a>
 
       <div class="nav-links">
         <a href="#about">About</a>
@@ -442,12 +29,10 @@
     </div>
   </nav>
 
-  <!-- PROFILE / HERO -->
-
+  <!-- HERO -->
   <header class="hero" id="home">
     <div class="container">
       <div class="hero-content">
-
         <div class="profile-wrap">
           <img
             class="profile"
@@ -458,7 +43,6 @@
 
         <div class="hero-text">
           <div class="eyebrow">Personal Portfolio</div>
-
           <h1>Muhammad Azri</h1>
 
           <p>
@@ -468,34 +52,25 @@
           </p>
 
           <div class="hero-actions">
-            <a
-              class="btn btn-primary"
-              href="https://www.linkedin.com/in/muhammad-azri-224b6241a/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a class="btn btn-primary"
+               href="https://www.linkedin.com/in/muhammad-azri-224b6241a/"
+               target="_blank" rel="noopener noreferrer">
               LinkedIn ↗
             </a>
 
-            <a
-              class="btn btn-secondary"
-              href="https://github.com/azridalimi"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a class="btn btn-secondary"
+               href="https://github.com/azridalimi"
+               target="_blank" rel="noopener noreferrer">
               GitHub ↗
             </a>
           </div>
         </div>
-
       </div>
     </div>
   </header>
 
   <main>
-
-    <!-- ABOUT ME -->
-
+    <!-- ABOUT -->
     <section id="about">
       <div class="container">
         <div class="section-heading">
@@ -517,7 +92,6 @@
     </section>
 
     <!-- EDUCATION -->
-
     <section id="education">
       <div class="container">
         <div class="section-heading">
@@ -537,8 +111,7 @@
       </div>
     </section>
 
-    <!-- MNRB SCHOLARSHIP -->
-
+    <!-- SCHOLARSHIP -->
     <section id="scholarship">
       <div class="container">
         <div class="section-heading">
@@ -550,7 +123,6 @@
         </div>
 
         <article class="card scholarship-card">
-
           <div class="scholarship-icon">
             <img
               class="mnrb-logo"
@@ -562,21 +134,17 @@
           <div>
             <span class="project-label">SCHOLARSHIP AWARD</span>
             <h3>MNRB Holdings Scholarship</h3>
-
             <p>
               Recipient of the MNRB Holdings Scholarship, supporting
               my educational journey and continued academic development.
             </p>
-
             <span class="status">✓ Scholarship Recipient</span>
           </div>
-
         </article>
       </div>
     </section>
 
     <!-- SKILLS -->
-
     <section id="skills">
       <div class="container">
         <div class="section-heading">
@@ -606,7 +174,6 @@
     </section>
 
     <!-- PROJECTS -->
-
     <section id="projects">
       <div class="container">
         <div class="section-heading">
@@ -618,13 +185,9 @@
         </div>
 
         <div class="grid">
-
-          <!-- HAZESHIELD AI -->
-
           <article class="card">
             <span class="project-label">ARTIFICIAL INTELLIGENCE</span>
             <h3>HazeShield AI Chatbot</h3>
-
             <p>
               An AI chatbot prototype designed to help users explore haze,
               air quality, and the potential effects of air pollution on
@@ -632,83 +195,57 @@
               and conversational AI.
             </p>
 
-            <a
-              class="text-link"
-              href="https://azri-ai.onrender.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a class="text-link"
+               href="https://azri-ai.onrender.com/"
+               target="_blank" rel="noopener noreferrer">
               Try AI Demo ↗
             </a>
 
-            <a
-              class="text-link"
-              href="https://azridalimi.github.io/hazeshield-website/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a class="text-link"
+               href="https://azridalimi.github.io/hazeshield-website/"
+               target="_blank" rel="noopener noreferrer">
               HazeShield Website ↗
             </a>
 
-            <a
-              class="text-link"
-              href="https://github.com/azridalimi?tab=repositories"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a class="text-link"
+               href="https://github.com/azridalimi?tab=repositories"
+               target="_blank" rel="noopener noreferrer">
               Source Repositories ↗
             </a>
           </article>
 
-          <!-- ENGINEERING PROJECT -->
-
           <article class="card">
             <span class="project-label">ENGINEERING DESIGN</span>
             <h3>3D Bridge Design</h3>
-
             <p>
               A bridge design and prototyping project involving
               3D modelling and engineering concepts.
             </p>
-
-            <a
-              class="text-link"
-              href="https://github.com/azridalimi"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a class="text-link"
+               href="https://github.com/azridalimi"
+               target="_blank" rel="noopener noreferrer">
               Explore GitHub ↗
             </a>
           </article>
 
-          <!-- DATA ANALYTICS PROJECT -->
-
           <article class="card">
             <span class="project-label">DATA ANALYTICS</span>
             <h3>Data Dashboard</h3>
-
             <p>
               A learning project focused on presenting information through
               charts and a structured dashboard using data visualization
               tools.
             </p>
-
-            <a
-              class="text-link"
-              href="https://github.com/azridalimi"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a class="text-link"
+               href="https://github.com/azridalimi"
+               target="_blank" rel="noopener noreferrer">
               Explore GitHub ↗
             </a>
           </article>
 
-          <!-- HAZESHIELD INDOOR FARM -->
-
           <article class="card">
             <span class="project-label">GREEN TECHNOLOGY · IOT</span>
             <h3>HazeShield Indoor Farm</h3>
-
             <p>
               An ongoing smart agriculture concept exploring indoor growing,
               air-quality monitoring, environmental sensors, and automated
@@ -716,35 +253,26 @@
               during haze.
             </p>
 
-            <a
-              class="text-link"
-              href="https://azridalimi.github.io/hazeshield-website/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a class="text-link"
+               href="https://azridalimi.github.io/hazeshield-website/"
+               target="_blank" rel="noopener noreferrer">
               Visit Project Website ↗
             </a>
 
-            <a
-              class="text-link"
-              href="https://github.com/azridalimi?tab=repositories"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a class="text-link"
+               href="https://github.com/azridalimi?tab=repositories"
+               target="_blank" rel="noopener noreferrer">
               Explore GitHub ↗
             </a>
           </article>
-
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-
     <section id="contact">
       <div class="container">
         <div class="card contact-card">
-
           <div class="section-heading">
             <span>Get In Touch</span>
             <h2>Let's Connect</h2>
@@ -756,48 +284,34 @@
           </p>
 
           <div class="hero-actions contact-actions">
-
-            <a
-              class="btn btn-primary"
-              href="https://www.linkedin.com/in/muhammad-azri-224b6241a/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a class="btn btn-primary"
+               href="https://www.linkedin.com/in/muhammad-azri-224b6241a/"
+               target="_blank" rel="noopener noreferrer">
               LinkedIn ↗
             </a>
 
-            <a
-              class="btn btn-secondary"
-              href="https://github.com/azridalimi"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a class="btn btn-secondary"
+               href="https://github.com/azridalimi"
+               target="_blank" rel="noopener noreferrer">
               GitHub ↗
             </a>
 
-            <a
-              class="btn btn-secondary"
-              href="https://www.tiktok.com/@azri.tch"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a class="btn btn-secondary"
+               href="https://www.tiktok.com/@azri.tch"
+               target="_blank" rel="noopener noreferrer">
               TikTok ↗
             </a>
-
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
   <!-- FOOTER -->
-
   <footer>
     <div class="container">
       © 2026 Muhammad Azri · Personal Portfolio
     </div>
   </footer>
-
 </body>
 </html>
