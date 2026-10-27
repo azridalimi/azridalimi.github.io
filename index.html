@@ -4,122 +4,644 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0b1120">
+  <meta name="theme-color" content="#07111f">
 
   <meta
     name="description"
-    content="Muhammad Azri, UTM Computer Science student exploring AI chatbot development, data analytics, Python, and green technology innovation."
+    content="Muhammad Azri is a Computer Science student at Universiti Teknologi Malaysia interested in technology, Python, data analytics, AI and green technology innovation."
   >
+
+  <meta
+    name="keywords"
+    content="Muhammad Azri, UTM, Computer Science, Python, Data Analytics, HazeShield, Portfolio"
+  >
+
+  <meta name="author" content="Muhammad Azri">
 
   <title>Muhammad Azri | Digital Portfolio</title>
 
-  <!-- Connect the separate CSS file -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- Letakkan semua kandungan portfolio HTML awak di sini.
-       Contohnya: header, navigation, about, education,
-       scholarship, skills, projects and contact. -->
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
 
-  <header class="hero">
-    <img
-      class="profile"
-      src="images/gambar.jfif"
-      alt="Muhammad Azri profile photo"
-    >
+      <a href="#home" class="brand">
+        AZRI<span>.</span>
+      </a>
 
-    <h1>Muhammad Azri</h1>
-    <p>Computer Science Student at Universiti Teknologi Malaysia</p>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <div class="social-links">
-      <a href="https://github.com/azridalimi" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://www.linkedin.com/in/muhammad-azri-224b6241a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://www.tiktok.com/@azri.tch" target="_blank" rel="noopener noreferrer">TikTok</a>
-    </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#scholarship" class="nav-link">Scholarship</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+    </nav>
   </header>
 
-  <main class="container">
-    <section id="about" class="card">
-      <h2>About Me</h2>
-      <p>
-        I am a Computer Science student at UTM with an interest in
-        AI chatbot development, data analytics, Python, and green technology.
-      </p>
+
+  <main>
+
+    <!-- =========================
+         HERO / HOME
+    ========================== -->
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+
+        <div class="hero-image-wrapper">
+          <div class="hero-image-glow"></div>
+
+          <img
+            src="images/gambar.jfif"
+            alt="Portrait of Muhammad Azri"
+            class="profile-image"
+          >
+
+          <div class="image-decoration"></div>
+        </div>
+
+        <div class="hero-content">
+
+          <p class="eyebrow">
+            COMPUTER SCIENCE STUDENT
+          </p>
+
+          <h1>
+            Hi, I'm <span>Muhammad Azri.</span>
+          </h1>
+
+          <h2 class="hero-subtitle">
+            Exploring Technology.
+            <span>Building Ideas.</span>
+          </h2>
+
+          <p class="hero-description">
+            I am a Computer Science student at Universiti Teknologi
+            Malaysia (UTM), interested in technology, Python,
+            data analytics, AI development and green technology innovation.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="button button-primary">
+              Explore My Projects
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a href="#contact" class="button button-secondary">
+              Get in Touch
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a
+              href="https://github.com/azridalimi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >GitHub ↗</a>
+
+            <a
+              href="https://www.linkedin.com/in/muhammad-azri-224b6241a/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >LinkedIn ↗</a>
+
+            <a
+              href="https://www.tiktok.com/@azri.tch"
+              target="_blank"
+              rel="noopener noreferrer"
+            >TikTok ↗</a>
+          </div>
+
+        </div>
+
+        <div class="hero-side-note">
+          <span class="side-line"></span>
+          <p>LEARN</p>
+          <p>BUILD</p>
+          <p>INNOVATE</p>
+        </div>
+
+      </div>
     </section>
 
-    <section id="education" class="card">
-      <h2>Education</h2>
-      <p>Universiti Teknologi Malaysia (UTM)</p>
-      <p>Computer Science</p>
-    </section>
 
-    
-    <section id="education" class="card">
-      <h2>Education</h2>
-    
-      <div class="education-content">
-        <img
-          src="images/LOGO-Faculty-of-Computing-meroon-big.png"
-          alt="Faculty of Computing, Universiti Teknologi Malaysia logo"
-          class="faculty-logo"
-        >
-    
-        <div class="education-details">
-          <h3>Universiti Teknologi Malaysia (UTM)</h3>
-          <p>Faculty of Computing</p>
-          <p>Computer Science</p>
+    <!-- =========================
+         ABOUT
+    ========================== -->
+    <section class="section" id="about">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">GET TO KNOW ME</p>
+          <h2>About <span>Me</span></h2>
+          <p>
+            My background, interests and journey in technology.
+          </p>
+        </div>
+
+        <div class="about-grid">
+
+          <article class="card about-card">
+            <div class="card-icon" aria-hidden="true">01</div>
+
+            <h3>Who I Am</h3>
+
+            <p>
+              I am a Computer Science student at Universiti Teknologi
+              Malaysia. I am developing my knowledge of computing
+              through learning, experimentation and practical projects.
+            </p>
+
+            <p>
+              I value continuous learning, problem-solving and using
+              technology to explore meaningful ideas.
+            </p>
+          </article>
+
+          <article class="card about-card">
+            <div class="card-icon" aria-hidden="true">02</div>
+
+            <h3>What Interests Me</h3>
+
+            <p>
+              My interests include Python programming, data analytics,
+              AI chatbot development, web development and green
+              technology innovation.
+            </p>
+
+            <p>
+              I am interested in understanding how digital technologies
+              can support practical solutions to real-world problems.
+            </p>
+          </article>
+
+          <article class="card about-card">
+            <div class="card-icon" aria-hidden="true">03</div>
+
+            <h3>My Direction</h3>
+
+            <p>
+              I aim to strengthen my technical foundation, develop
+              practical projects and continue exploring opportunities
+              in computing and data-related fields.
+            </p>
+
+            <a href="#skills" class="text-link">
+              Explore my learning areas <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
         </div>
       </div>
     </section>
 
 
-    <section id="scholarship" class="card">
-      <h2>Scholarship</h2>
-      <img
-        class="mnrb-logo"
-        src="images/MNRB_logo.svg"
-        alt="MNRB logo"
-      >
-      <p>MNRB Holdings Scholarship Recipient</p>
-    </section>
+    <!-- =========================
+         EDUCATION
+    ========================== -->
+    <section class="section section-alt" id="education">
+      <div class="container">
 
-    <section id="skills" class="card">
-      <h2>Skills & Learning</h2>
-      <ul>
-        <li>Python — learning and development</li>
-        <li>HTML and CSS</li>
-        <li>Git and GitHub</li>
-        <li>Excel</li>
-        <li>Power BI — learning</li>
-      </ul>
-    </section>
+        <div class="section-heading">
+          <p class="eyebrow">ACADEMIC BACKGROUND</p>
+          <h2>My <span>Education</span></h2>
+          <p>
+            Building my foundation in computing and technology.
+          </p>
+        </div>
 
-    <section id="projects" class="card">
-      <h2>Projects</h2>
-      <h3>HazeShield Indoor Farm</h3>
-      <p>
-        An indoor farming concept exploring IoT-based air quality
-        monitoring and environmental control.
-      </p>
-      <a href="https://azridalimi.github.io/hazeshield-website/" target="_blank" rel="noopener noreferrer">
-        Visit HazeShield Website
-      </a>
-    </section>
+        <article class="card education-card">
 
-    <section id="contact" class="card">
-      <h2>Contact & Social Media</h2>
-      <div class="social-links">
-        <a href="https://github.com/azridalimi" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/muhammad-azri-224b6241a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://www.tiktok.com/@azri.tch" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <div class="education-logo-panel">
+            <div class="logo-frame">
+              <img
+                src="images/LOGO-Faculty-of-Computing-meroon-big.png"
+                alt="Universiti Teknologi Malaysia and Faculty of Computing logo"
+                class="faculty-logo"
+              >
+            </div>
+
+            <p class="logo-caption">
+              UNIVERSITI TEKNOLOGI MALAYSIA
+            </p>
+          </div>
+
+          <div class="education-details">
+
+            <span class="status-label">
+              ACADEMIC JOURNEY
+            </span>
+
+            <h3>Universiti Teknologi Malaysia (UTM)</h3>
+
+            <p class="faculty-name">
+              Faculty of Computing
+            </p>
+
+            <div class="detail-divider"></div>
+
+            <div class="education-detail-row">
+              <span class="detail-symbol" aria-hidden="true">01</span>
+              <div>
+                <h4>Computer Science</h4>
+                <p>
+                  Developing knowledge in computing, programming
+                  and digital technology.
+                </p>
+              </div>
+            </div>
+
+            <div class="education-detail-row">
+              <span class="detail-symbol" aria-hidden="true">02</span>
+              <div>
+                <h4>Continuous Learning</h4>
+                <p>
+                  Exploring programming, data analytics and
+                  technology-based innovation.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
       </div>
     </section>
+
+
+    <!-- =========================
+         SCHOLARSHIP
+    ========================== -->
+    <section class="section" id="scholarship">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">ACADEMIC SUPPORT</p>
+          <h2>Scholarship & <span>Recognition</span></h2>
+          <p>
+            Supporting my educational journey and development.
+          </p>
+        </div>
+
+        <article class="card scholarship-card">
+
+          <div class="scholarship-logo-panel">
+            <img
+              src="images/MNRB_logo.svg"
+              alt="MNRB Holdings Berhad logo"
+              class="mnrb-logo"
+            >
+          </div>
+
+          <div class="scholarship-content">
+
+            <span class="status-label">
+              SCHOLARSHIP RECIPIENT
+            </span>
+
+            <h3>MNRB Holdings Scholarship</h3>
+
+            <p>
+              I am a recipient of the MNRB Holdings Scholarship,
+              which supports my educational journey and continued
+              academic development.
+            </p>
+
+            <a
+              href="https://www.mnrb.com.my/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-link"
+            >
+              Visit MNRB Holdings <span aria-hidden="true">↗</span>
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">TECHNICAL DEVELOPMENT</p>
+          <h2>Skills & <span>Interests</span></h2>
+          <p>
+            Technologies and areas I am learning and exploring.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+
+          <article class="card skill-card">
+            <div class="skill-number">01</div>
+            <h3>Programming</h3>
+            <p>
+              Python and programming fundamentals.
+            </p>
+            <span class="skill-tag">Learning & Practice</span>
+          </article>
+
+          <article class="card skill-card">
+            <div class="skill-number">02</div>
+            <h3>Web Development</h3>
+            <p>
+              HTML, CSS and responsive website design.
+            </p>
+            <span class="skill-tag">Practical Projects</span>
+          </article>
+
+          <article class="card skill-card">
+            <div class="skill-number">03</div>
+            <h3>Data Analytics</h3>
+            <p>
+              Microsoft Excel and learning Power BI.
+            </p>
+            <span class="skill-tag">Developing Skills</span>
+          </article>
+
+          <article class="card skill-card">
+            <div class="skill-number">04</div>
+            <h3>Version Control</h3>
+            <p>
+              Using Git and GitHub to manage and publish projects.
+            </p>
+            <span class="skill-tag">Practical Use</span>
+          </article>
+
+          <article class="card skill-card">
+            <div class="skill-number">05</div>
+            <h3>Artificial Intelligence</h3>
+            <p>
+              Exploring AI chatbot development and conversational
+              interfaces.
+            </p>
+            <span class="skill-tag">Exploration</span>
+          </article>
+
+          <article class="card skill-card">
+            <div class="skill-number">06</div>
+            <h3>Green Technology</h3>
+            <p>
+              Exploring technology concepts for indoor farming
+              and environmental monitoring.
+            </p>
+            <span class="skill-tag">Innovation</span>
+          </article>
+
+        </div>
+
+        <p class="skills-note">
+          Note: These sections describe my current learning and
+          interests, not professional certifications.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
+    <section class="section" id="projects">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">SELECTED WORK</p>
+          <h2>Featured <span>Projects</span></h2>
+          <p>
+            Exploring ideas through practical technology projects.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="card project-card">
+
+            <div class="project-top">
+              <span class="project-category">GREEN TECHNOLOGY</span>
+              <span class="project-index">PROJECT 01</span>
+            </div>
+
+            <div class="project-visual haze-visual" aria-hidden="true">
+              <span class="visual-orbit orbit-one"></span>
+              <span class="visual-orbit orbit-two"></span>
+              <span class="visual-core">HS</span>
+            </div>
+
+            <div class="project-content">
+              <h3>HazeShield Indoor Farm</h3>
+
+              <p>
+                An indoor farming concept exploring IoT-based air
+                quality monitoring and environmental control to
+                support controlled growing environments.
+              </p>
+
+              <div class="project-tags">
+                <span>IoT</span>
+                <span>Air Quality</span>
+                <span>Smart Agriculture</span>
+              </div>
+
+              <a
+                href="https://azridalimi.github.io/hazeshield-website/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button button-primary project-button"
+              >
+                View Project <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+
+          </article>
+
+
+          <article class="card project-card">
+
+            <div class="project-top">
+              <span class="project-category">AI DEVELOPMENT</span>
+              <span class="project-index">PROJECT 02</span>
+            </div>
+
+            <div class="project-visual ai-visual" aria-hidden="true">
+              <span class="ai-node node-one"></span>
+              <span class="ai-node node-two"></span>
+              <span class="ai-node node-three"></span>
+              <span class="ai-center">AI</span>
+            </div>
+
+            <div class="project-content">
+              <h3>AI Chatbot Exploration</h3>
+
+              <p>
+                Exploring conversational AI interfaces and chatbot
+                development through Python-based experimentation.
+              </p>
+
+              <div class="project-tags">
+                <span>Python</span>
+                <span>AI</span>
+                <span>Chatbot</span>
+              </div>
+
+              <p class="project-status">
+                Personal learning project
+              </p>
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+
+        <div class="contact-card card">
+
+          <div class="contact-content">
+            <p class="eyebrow">LET'S CONNECT</p>
+
+            <h2>
+              Let's learn, build and
+              <span>grow together.</span>
+            </h2>
+
+            <p>
+              Feel free to explore my profiles and follow my
+              learning journey in technology and innovation.
+            </p>
+          </div>
+
+          <div class="contact-links">
+
+            <a
+              href="https://github.com/azridalimi"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link"
+            >
+              <span>GitHub</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/muhammad-azri-224b6241a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link"
+            >
+              <span>LinkedIn</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a
+              href="https://www.tiktok.com/@azri.tch"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link"
+            >
+              <span>TikTok</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <p>&copy; 2026 Muhammad Azri. All rights reserved.</p>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+
+      <a href="#home" class="brand footer-brand">
+        AZRI<span>.</span>
+      </a>
+
+      <p>
+        Designed and developed by Muhammad Azri.
+      </p>
+
+      <p class="copyright">
+        &copy; 2026 Muhammad Azri. All rights reserved.
+      </p>
+
+    </div>
   </footer>
+
+
+  <!-- Small script for mobile navigation -->
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector(".nav-menu");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navMenu.classList.toggle("is-open");
+
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+    });
+
+    navLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        navMenu.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+
+        navLinks.forEach(function (item) {
+          item.classList.remove("active");
+        });
+
+        link.classList.add("active");
+      });
+    });
+  </script>
 
 </body>
 </html>
