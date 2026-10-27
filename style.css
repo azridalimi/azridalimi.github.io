@@ -195,10 +195,20 @@ ul {
   color: var(--accent);
 }
 
+
 .nav-menu {
   display: flex;
   align-items: center;
   gap: 28px;
+}
+
+
+
+.logo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  
+  padding: 2px;        
 }
 
 .nav-link {
