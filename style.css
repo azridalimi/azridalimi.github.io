@@ -2,24 +2,25 @@
 
 :root {
   /* Latar Belakang Utama (Brown Theme) */
-  --bg-main: #453B1D;
-  --bg-secondary: #806837;
-  --bg-card: #322A14;         
-  --bg-card-hover: #3D3319;  
+  --bg-main: #FDFBF7;          /* Warm Cream Background */
+  --bg-secondary: #F4EFE6;     
+  --bg-card: #FFFFFF;          /* Pure White Card */
+  --bg-card-hover: #F9F6F0;    
   
   /* Warna Penyerlah (Gold) */
-  --accent: #E5C158;         
-  --accent-bright: #FCD34D;   
-  --accent-soft: rgba(229, 193, 88, 0.15);
+  --accent: #C85A32;          /* Terracotta Orange/Rust */
+  --accent-bright: #E07A5F;   
+  --accent-soft: rgba(200, 90, 50, 0.1);
+
 
   /* text colour */
-  --text-main: #FDFBF7;       /* Teks utama */
-  --text-secondary: #E2D9C8;  /* Teks sekunder  */
-  --text-muted: #B3A895;      /* Teks pudar */
+  --text-main: #2B2623;       /* Dark Coffee Text */
+  --text-secondary: #605752;  
+  --text-muted: #8C827A;
 
   /* Border */
-  --border: rgba(229, 193, 88, 0.2);
-  --border-accent: rgba(229, 193, 88, 0.5);
+  --border: rgba(43, 38, 35, 0.1);
+  --border-accent: rgba(200, 90, 50, 0.3);
 
   /* Bentuk Layout */
   --radius-small: 10px;
