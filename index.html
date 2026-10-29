@@ -6,37 +6,85 @@
     <title>e-Portfolio | MUHAMMAD AZRI</title>
     <!-- Hubungkan fail CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Bahagian Header & Navigasi -->
-    <header>
-        <h1>MUHAMMAD AZRI</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#work">Selected Work</a>
-            <a href="#reflection">Reflection</a>
-        </nav>
+    <header class="site-header">
+    <nav class="navbar container">
+        <!-- Logo di sebelah kiri -->   
+        <a href="#home" class="brand">
+        <img src="LOGO-Faculty-of-Computing-meroon-big.png" alt="Logo" class="brand-logo">
+        </a>
+
+        <!-- Nama dan Menu Navigasi di sebelah kanan -->
+        <div class="nav-right">
+        <div class="nav-logos">
+            <img src="mnrb-holdings-seeklogo.png" alt="MNRB Holdings" class="partner-logo">
+            <img src="aws academy logo.png" alt="AWS Academy" class="partner-logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#home">About Me</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#reflection">Reflection</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        </div>
+    </nav>
     </header>
 
     <main>
         <!-- Bahagian About -->
-        <section id="about">
-            <h2>Professional Profile</h2>
-            <p>Welcome to my e-Portfolio.</p>
+        <section id="home" class="hero-section container">
+        <!-- Bahagian Kiri: Ucapan & Deskripsi -->
+        <div class="hero-text">
+            <span class="welcome-badge">WELCOME TO MY PORTFOLIO</span>
+            <h1 class="hero-title">
+            Hi, I'm <span class="text-accent">MUHAMMAD AZRI</span>
+            </h1>
+            <p class="hero-subtitle">
+            Data Engineering Student<br>
+            UNIVERSITI TEKNOLOGI MALAYSIA
+            </p>
+    
+            <p class="hero-description">
+            Welcome to my personal e-Portfolio. I specialize in cloud services, Data Cleaning, Database Design, Python, data analytics, AI systems, and green tech innovation.
+            </p>
+            <div class="hero-actions">
+            <a href="#project" class="btn-primary">Project View</a>
+            </div>
+        </div>
+
+        <!-- Bahagian Kanan: Gambar Muka & Frame Glow -->
+        <div class="hero-avatar-wrapper">
+            <div class="avatar-glow"></div>
+            <div class="avatar-frame">
+            <img src="OIP.webp" alt="Muhammad Azri" class="avatar-img">
+            </div>
+        </div>
         </section>
 
-        <!-- Bahagian Selected Work -->
-        <section id="work">
-            <h2>Selected Work</h2>
+        <!-- Bahagian project -->
+        <section id="project">
+            <h2>Project</h2>
             <div class="project-grid">
                 <div class="project-card">
-                    <h3>Projek 1</h3>
-                   
-                </div>
-                <div class="project-card">
-                    <h3>Projek 2</h3>
-                  
+                    <div class="project-badge">Green Innovation</div>
+                    <h3 class="project-title">VERDANEX</h3>
+                    <p class="project-desc">
+                    Inovasi teknologi hijau berasaskan pemantauan pintar untuk menyokong kelestarian alam sekitar dan pengurusan tenaga.
+                    </p>
+                    
+                    <!-- Tag Kemahiran / Tech Stack -->
+                    <div class="project-tags">
+                    <span>Green Tech</span>
+                    <span>IoT</span>
+                    <span>Data Analytics</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -46,6 +94,13 @@
             <h2>Reflection</h2>
         
         </section>
+        <!--Bahagian Contact-->
+        <section id="contact">
+            <h2>Contact</h2>
+        
+        </section>
+
+
     </main>
 
     <footer>
