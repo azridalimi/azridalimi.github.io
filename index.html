@@ -10,31 +10,57 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // Tutup menu secara automatik bila mana-mana pautan ditekan
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+</script>
 <body>
 
     <!-- Bahagian Header & Navigasi -->
     <header class="site-header">
-    <nav class="navbar container">
-        <!-- Logo di sebelah kiri -->   
-        <a href="#home" class="brand">
-        <img src="LOGO-Faculty-of-Computing-meroon-big.png" alt="Logo" class="brand-logo">
-        </a>
+        <nav class="navbar container">
+            
+            <!-- Logo di sebelah kiri -->   
+            <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <a href="#home" class="brand">
+                    <img src="LOGO-Faculty-of-Computing-meroon-big.png" alt="Logo" class="brand-logo">
+                </a>
+                <button class="hamburger-btn" onclick="toggleMenu()">&#9776;</button>
+            </div>
+            <!-- Logo Partner (Untuk Desktop / Paparan Biasa) -->
+            <div class="nav-right">
+                <div class="nav-logos">
+                    <img src="mnrb-holdings-seeklogo.png" alt="MNRB Holdings" class="partner-logo">
+                    <img src="Verdanex_Green_Innovation_Branding-removebg-preview.png" alt="Verdanex" class="partner-logo">
+                    <img src="WYSII_logo__black_-removebg-preview (1).png" alt="WYSII" class="partner-logo">
+                    <img src="MYSO logo (black).png" alt="MYSO" class="partner-logo">
+                    <img src="aws academy logo.png" alt="AWS Academy" class="partner-logo">
+                </div>
 
-        <!-- Nama dan Menu Navigasi di sebelah kanan -->
-        <div class="nav-right">
-        <div class="nav-logos">
-            <img src="mnrb-holdings-seeklogo.png" alt="MNRB Holdings" class="partner-logo">
-            <img src="aws academy logo.png" alt="AWS Academy" class="partner-logo">
-        </div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#home">About Me</a></li>
-            <li><a href="#project">Projects</a></li>
-            <li><a href="#reflection">Reflection</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        </div>
-    </nav>
+
+                <!-- SENARAI MENU (PENTING: Kita letak id="navMenu" di sini) -->
+                <ul class="nav-links" id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#home">About Me</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#reflection">Reflection</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+        </nav>
     </header>
 
     <main>
@@ -52,22 +78,113 @@
             </p>
     
             <p class="hero-description">
-            Welcome to my personal e-Portfolio. I specialize in cloud services, Data Cleaning, Database Design, Python, data analytics, AI systems, and green tech innovation.
+            Welcome to my personal e-Portfolio. I specialize in cloud services, data cleaning, database design, python, data analytics, AI systems, and green tech innovation.
             </p>
-            <div class="hero-actions">
-            <a href="#project" class="btn-primary">Project View</a>
-            </div>
         </div>
 
         <!-- Bahagian Kanan: Gambar Muka & Frame Glow -->
         <div class="hero-avatar-wrapper">
             <div class="avatar-glow"></div>
             <div class="avatar-frame">
-            <img src="OIP.webp" alt="Muhammad Azri" class="avatar-img">
+            <img src="6ab03406-9ca6-40ef-8610-dcfb6fbb1a18.jpg" alt="Muhammad Azri" class="avatar-img">
             </div>
         </div>
         </section>
 
+        <!-- Bahagian Galeri Auto-Slide -->
+        <section class="gallery-section">
+            <h2>Project Gallery</h2>
+            
+            <div class="slider">
+                <div class="slides">
+                    <!-- Gambar 1 -->
+                    <div class="slide">
+                        <img src="beforecompetition.jpg" alt="WYSII 2026">
+                    </div>
+                    <!-- Gambar 2 -->
+                    <div class="slide">
+                        <img src="award.jpg" alt="Special Award">
+                    </div>
+                    <!-- Gambar 3 -->
+                    <div class="slide">
+                        <img src="3ddesignsolidworks.jpg" alt="design">
+                    </div>
+                    <div class="slide">
+                        <img src="prototaip.jpg" alt="prototype">
+                    </div>
+                    <div class="slide">
+                        <img src="pokok.jpg" alt="pokok">
+                    </div>
+                    <div class="slide">
+                        <img src="pal.jpg" alt="pal">
+                    </div>
+                    <div class="slide">
+                        <img src="4flat.jpg" alt="4flat">
+                    </div>
+                    <div class="slide">
+                        <img src="bridge.jpg" alt="bridge">
+                    </div>
+                    <div class="slide">
+                        <img src="jambatan.jpg" alt="jambatan">
+                    </div>
+                    <div class="slide">
+                        <img src="ledfarming.jpg" alt="farming">
+                    </div>
+                
+                
+                </div>
+
+                <!-- Titik Penanda (Indicators) -->
+                <div class="navigation-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+        <script>
+            let currentIndex = 0;
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+            const dots = document.querySelectorAll('.dot');
+
+            function updateSlider() {
+                // Alihkan gambar mengikut indeks semasa
+                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+                // Kemaskinikan titik aktif
+                dots.forEach((dot, index) => {
+                    if (index === currentIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+
+            // Fungsi untuk menggerakkan gambar seterusnya
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateSlider();
+            }
+
+            // Auto slide setiap 3 saat (3000ms)
+            setInterval(nextSlide, 3000);
+        </script>
+
+        <!-- Bahagian Reflection -->
+        <section id="news">
+            <h2>News</h2>
+            <div class="news-content">
+                <span class="news-date">03 Nov 2026</span><br>
+                <h3>INDUSTRY TALK</h3>
+                by Dr Zahari Othman ( Director Center For Teaching Thinking & Innovation CenT-TI )
+            </div>
+            <div class="news-more">
+                <a href="news-detail.html">more..</a>
+        </div>
+        </div>
+        </section>
         <!-- Bahagian project -->
         <section id="project">
             <h2>Project</h2>
@@ -106,6 +223,18 @@
     <footer>
         <p>&copy; 2026 Muhammad Azri. Hak Cipta Terpelihara.</p>
     </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            
+            // Semak sama ada menu sedang terbuka atau tidak
+            if (menu.classList.contains('show')) {
+            menu.classList.remove('show'); // Jika terbuka, buang kelas 'show' (tutup)
+            } else {
+            menu.classList.add('show');    // Jika tertutup, tambah kelas 'show' (buka)
+            }
+        }
+    </script>
 
 </body>
 </html>
